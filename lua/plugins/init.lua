@@ -12,6 +12,13 @@ return {
       require "configs.lspconfig"
     end,
   },
+  {
+    "ggandor/leap.nvim",
+    config = function()
+      require("leap").set_default_mappings()
+    end,
+    lazy = false,
+  },
 
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
