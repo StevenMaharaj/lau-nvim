@@ -4,7 +4,8 @@ local options = {
     css = { "prettier" },
     html = { "prettier" },
     typescript = { "prettier" },
-    -- python = { "isort", "black" },
+    python = { "ruff_fix","ruff_format","ruff_organize_imports" },
+    cpp={"clang-format"},
 
   },
 
