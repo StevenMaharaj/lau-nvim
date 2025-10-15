@@ -20,6 +20,26 @@ return {
     lazy = false,
   },
 
+  {
+  "github/copilot.vim",
+  lazy = false,
+  config = function()
+    -- disable the default Tab mapping that copilot.vim sets
+    vim.g.copilot_no_tab_map = true
+    vim.g.copilot_assume_mapped = true
+  end,
+  },
+  {
+  "github/copilot-chat.nvim",
+  dependencies = { "github/copilot.vim" },
+  cmd = { "CopilotChat" },
+  config = function()
+    vim.keymap.set("n", "<leader>cc", ":CopilotChat<CR>", { desc = "Open Copilot Chat" })
+  end,
+}
+
+
+
   -- test new blink
   -- { import = "nvchad.blink.lazyspec" },
 
