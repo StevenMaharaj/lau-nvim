@@ -29,14 +29,6 @@ return {
     vim.g.copilot_assume_mapped = true
   end,
   },
-  {
-  "github/copilot-chat.nvim",
-  dependencies = { "github/copilot.vim" },
-  cmd = { "CopilotChat" },
-  config = function()
-    vim.keymap.set("n", "<leader>cc", ":CopilotChat<CR>", { desc = "Open Copilot Chat" })
-  end,
-}
 
 
 
